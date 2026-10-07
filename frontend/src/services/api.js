@@ -1,5 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
-
+const API_URL = import.meta.env.VITE_API_URL || 'https://task-management-system-tkbo.onrender.com/api';
 export const fetchTasks = async (params = {}) => {
   const query = new URLSearchParams(params).toString();
   const res = await fetch(`${API_URL}/tasks?${query}`);
